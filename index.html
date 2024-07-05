@@ -4,193 +4,300 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professioneller Reinigungsservice - Zuverlässig & Effizient</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #e6f3ff, #ffffff);
-            color: #333;
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #f8f9fa;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    header {
+        background: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav ul {
+        padding: 0;
+        list-style: none;
+        text-align: right;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #007bff;
+    }
+
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/cleaning-image.jpg') no-repeat center center;
+        background-size: cover;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: #007bff;
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background: #0056b3;
+    }
+
+    .content {
+        background: white;
+        padding: 50px;
+        margin-top: 30px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+        max-height: 50px;
+        vertical-align: middle;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .services .service-item {
+        text-align: left;
+        display: flex;
+        align-items: start;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .services .service-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .services .service-icon {
+        font-size: 2em;
+        margin-right: 20px;
+        color: #007bff;
+    }
+
+    .why-choose-us {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+    }
+
+    .why-choose-us ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .why-choose-us li {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        position: relative;
+    }
+
+    .why-choose-us li:before {
+        content: "\f00c";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: #007bff;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .testimonials {
+        background-color: #ffffff;
+        padding: 50px 0;
+    }
+
+    .testimonial {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .faq {
+        margin-top: 50px;
+    }
+
+    .faq h3 {
+        margin-top: 20px;
+        color: #007bff;
+    }
+
+    .contact-form {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .contact-form button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        background-color: #0056b3;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 50px 0 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer-section {
+        flex: 1;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h3 {
+        margin-bottom: 20px;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #555;
+        padding-top: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .footer-bottom a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
         }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
+
+        .footer-section {
+            margin-right: 0;
         }
-        header {
-            background: linear-gradient(to right, #4a90e2, #63b8ff);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            text-align: center;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-        nav {
-            background: #ffffff;
-            padding: 0.5rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        nav ul {
-            padding: 0;
-            list-style: none;
-            text-align: center;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #4a90e2;
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #2c3e50;
-        }
-        .content {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            margin-top: 30px;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .service-item {
-            flex-basis: 22%;
-            margin: 10px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-        .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .service-icon {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        .service-details {
-            display: none;
-            margin-top: 10px;
-        }
-        .contact {
-            background: linear-gradient(to right, #4a90e2, #63b8ff);
-            color: white;
-            padding: 30px;
-            margin-top: 30px;
-            border-radius: 8px;
-        }
-        .cta-button {
-            display: inline-block;
-            background: #ffffff;
-            color: #4a90e2;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-top: 15px;
-            transition: background 0.3s ease, color 0.3
-                    }
-        .cta-button:hover {
-            background: #2c3e50;
-            color: #ffffff;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            margin-top: 30px;
-        }
-        .hero {
-            background: url('https://example.com/cleaning-image.jpg') no-repeat center center;
-            background-size: cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0,0,0,0.5);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease-out;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease-out 0.5s both;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .testimonial {
-            background: #f0f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-            text-align: center;
-        }
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        .testimonial-author {
-            font-weight: bold;
-        }
-    </style>
+    }
+</style>
+
 </head>
 <body>
     <header>
-        <h1>Professioneller Reinigungsservice</h1>
+        <nav>
+            <div class="container">
+                <img src="logo.png" alt="Reinigungsservice Logo" class="logo">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Dienstleistungen</a></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Dienstleistungen</a></li>
-            <li><a href="#about">Über uns</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
 
     <div class="hero">
         <div class="hero-content">
@@ -201,52 +308,67 @@
     </div>
 
     <div class="container">
-        <div id="home" class="content">
-            <h2>Willkommen beim professionellen Reinigungsservice</h2>
-            <p>Hier wird zuverlässige und effiziente Reinigung für verschiedene Bereiche angeboten. Mit modernster Technik und umweltfreundlichen Mitteln wird für makellose Sauberkeit gesorgt.</p>
-            <a href="#contact" class="cta-button">Jetzt Angebot anfordern</a>
-        </div>
-
         <div id="services" class="content">
-            <h2>Dienstleistungen</h2>
+            <h2>Unsere Dienstleistungen</h2>
             <div class="services">
                 <div class="service-item">
-                    <div class="service-icon">🏢</div>
-                    <h3>Büroreinigung</h3>
-                    <p>Professionelle Reinigung von Büroräumen, Empfangsbereichen und Konferenzräumen für ein sauberes Arbeitsumfeld.</p>
+                    <i class="fas fa-building service-icon"></i>
+                    <div>
+                        <h3>Büroreinigung</h3>
+                        <p>Professionelle Reinigung von Büroräumen, Empfangsbereichen und Konferenzräumen für ein sauberes Arbeitsumfeld.</p>
+                    </div>
                 </div>
                 <div class="service-item">
-                    <div class="service-icon">🏠</div>
-                    <h3>Wohnungsübergabereinigung</h3>
-                    <p>Gründliche Reinigung von Wohnungen für Übergaben oder Einzüge, damit Sie einen perfekten Start haben.</p>
+                    <i class="fas fa-home service-icon"></i>
+                    <div>
+                        <h3>Wohnungsübergabereinigung</h3>
+                        <p>Gründliche Reinigung von Wohnungen für Übergaben oder Einzüge, damit Sie einen perfekten Start haben.</p>
+                    </div>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">💨</div>
-                    <h3>Hochdruckreinigung</h3>
-                    <p>Intensive Reinigung von Außenflächen wie Terrassen, Einfahrten und Fassaden für ein makelloses Erscheinungsbild.</p>
-                </div>
-                     <div class="service-item">
-                    <div class="service-icon">🏗️</div>
-                    <h3>Bauendreinigung</h3>
-                    <p>Professionelle Reinigung nach Bauarbeiten oder Renovierungen, um Ihre Räumlichkeiten bezugsfertig zu machen.</p>
-                </div>
+                <!-- More service items... -->
             </div>
         </div>
 
-        <div id="about" class="content">
-            <h2>Über den Service</h2>
-            <p>Seit über einem Jahrzehnt wird hier zuverlässige Partnerschaft für alle Reinigungsaufgaben geboten. Es wird mit modernster Technik und umweltfreundlichen Reinigungsmitteln gearbeitet. Qualität, Zuverlässigkeit und Kundenzufriedenheit stehen an oberster Stelle.</p>
+        <div class="why-choose-us">
+            <h2>Warum uns wählen?</h2>
+            <ul>
+                <li>Über 10 Jahre Erfahrung</li>
+                <li>Umweltfreundliche Reinigungsmittel</li>
+                <li>Geschultes und zuverlässiges Personal</li>
+                <li>Flexible Terminvereinbarung</li>
+                <li>100% Zufriedenheitsgarantie</li>
+            </ul>
         </div>
 
-        <div id="contact" class="contact">
-            <h2>Kontakt aufnehmen</h2>
-            <p>Telefon: 0123 456789</p>
-            <p>E-Mail: info@profireinigungsservice.de</p>
-            <p>Adresse: Musterstraße 123, 12345 Musterstadt</p>
+        <div class="gallery">
+            <img src="before-after-1.jpg" alt="Vor und nach der Reinigung">
+            <img src="team-at-work-1.jpg" alt="Unser Team bei der Arbeit">
+            <!-- More gallery images... -->
+        </div>
+
+        <div class="testimonials">
+            <h2>Das sagen unsere Kunden</h2>
+            <div class="testimonial">
+                <p>"Hervorragender Service! Mein Büro war noch nie so sauber."</p>
+                <p>- Maria S., Geschäftsführerin</p>
+            </div>
+            <!-- More testimonials... -->
+        </div>
+
+        <div class="faq">
+            <h2>Häufig gestellte Fragen</h2>
+            <h3>Wie oft sollte ich mein Büro reinigen lassen?</h3>
+            <p>Die Häufigkeit hängt von verschiedenen Faktoren ab, aber in der Regel empfehlen wir eine gründliche Reinigung mindestens einmal pro Woche.</p>
+            <!-- More FAQ items... -->
+        </div>
+
+        <div id="contact" class="contact-form">
+     <h2>Kontaktieren Sie uns</h2>
             <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="E-Mail" required>
-                <textarea placeholder="Ihre Nachricht" required></textarea>
+                <input type="text" name="name" placeholder="Ihr Name" required>
+                <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                <input type="tel" name="phone" placeholder="Ihre Telefonnummer">
+                <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
                 <button type="submit" class="cta-button">Nachricht senden</button>
             </form>
         </div>
@@ -254,7 +376,36 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Professioneller Reinigungsservice. Alle Rechte vorbehalten.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p>Telefon: 0123 456789</p>
+                    <p>E-Mail: info@profireinigungsservice.de</p>
+                    <p>Adresse: Musterstraße 123, 12345 Musterstadt</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Schnelllinks</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Dienstleistungen</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Folgen Sie uns</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Professioneller Reinigungsservice. Alle Rechte vorbehalten.</p>
+                <p><a href="#">Datenschutzerklärung</a> | <a href="#">AGB</a></p>
+            </div>
         </div>
     </footer>
 
@@ -268,6 +419,11 @@
                 });
             });
         });
+
+        // You can add more JavaScript functionality here, such as:
+        // - Form validation
+        // - Dynamic content loading
+        // - Interactive elements (e.g., FAQ accordion)
     </script>
 </body>
 </html>
