@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ihr Reinigungsservice - Professionell und Zuverlässig</title>
+    <title>Professioneller Reinigungsservice - Zuverlässig & Effizient</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #e6f3ff, #ffffff);
             color: #333;
         }
         .container {
-            width: 80%;
+            width: 90%;
             max-width: 1200px;
             margin: auto;
             overflow: hidden;
             padding: 20px;
         }
         header {
-            background: #35424a;
+            background: linear-gradient(to right, #4a90e2, #63b8ff);
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -29,31 +30,39 @@
         header h1 {
             margin: 0;
             text-align: center;
+            font-weight: 300;
+            letter-spacing: 1px;
         }
         nav {
-            background: #e8491d;
-            color: white;
+            background: #ffffff;
             padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         nav ul {
             padding: 0;
             list-style: none;
             text-align: center;
+            margin: 0;
         }
         nav ul li {
             display: inline;
-            margin: 0 10px;
+            margin: 0 15px;
         }
         nav ul li a {
-            color: white;
+            color: #4a90e2;
             text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #2c3e50;
         }
         .content {
-            margin-top: 20px;
             background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-top: 30px;
         }
         .services {
             display: flex;
@@ -63,39 +72,54 @@
         .service-item {
             flex-basis: 48%;
             margin-bottom: 20px;
-            padding: 15px;
+            padding: 20px;
             background: #f9f9f9;
-            border-radius: 5px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .contact {
-            background: #35424a;
+            background: linear-gradient(to right, #4a90e2, #63b8ff);
             color: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 8px;
         }
         .cta-button {
             display: inline-block;
-            background: #e8491d;
-            color: white;
-            padding: 10px 20px;
+            background: #ffffff;
+            color: #4a90e2;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
+            border-radius: 25px;
+            margin-top: 15px;
+            transition: background 0.3s ease, color 0.3s ease;
+            font-weight: 700;
+        }
+        .cta-button:hover {
+            background: #2c3e50;
+            color
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: #35424a;
+            background: #2c3e50;
             color: white;
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+        .service-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Ihr Reinigungsservice</h1>
+            <h1>Professioneller Reinigungsservice</h1>
         </div>
     </header>
 
@@ -104,7 +128,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Dienstleistungen</a></li>
-                <li><a href="#about">Über uns</a></li>
+                <li><a href="#about">Über den Service</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </div>
@@ -112,44 +136,46 @@
 
     <div class="container">
         <div id="home" class="content">
-            <h2>Willkommen bei Ihrem Reinigungsservice</h2>
-            <p>Wir bieten professionelle und zuverlässige Reinigungsdienstleistungen für Privathaushalte und Unternehmen. Unser erfahrenes Team sorgt dafür
-
-            <p>Wir bieten professionelle und zuverlässige Reinigungsdienstleistungen für Privathaushalte und Unternehmen. Unser erfahrenes Team sorgt dafür, dass Ihre Räumlichkeiten stets sauber und einladend sind.</p>
+            <h2>Willkommen beim professionellen Reinigungsservice</h2>
+            <p>Hier wird zuverlässige und effiziente Reinigung für verschiedene Bereiche angeboten. Mit modernster Technik und umweltfreundlichen Mitteln wird für makellose Sauberkeit gesorgt.</p>
             <a href="#contact" class="cta-button">Jetzt Angebot anfordern</a>
         </div>
 
         <div id="services" class="content">
-            <h2>Unsere Dienstleistungen</h2>
+            <h2>Dienstleistungen</h2>
             <div class="services">
                 <div class="service-item">
+                    <div class="service-icon">🏢</div>
                     <h3>Büroreinigung</h3>
                     <p>Professionelle Reinigung von Büroräumen, Empfangsbereichen und Konferenzräumen.</p>
                 </div>
                 <div class="service-item">
-                    <h3>Haushaltsreinigung</h3>
-                    <p>Gründliche Reinigung von Privatwohnungen und Häusern nach Ihren individuellen Wünschen.</p>
+                    <div class="service-icon">🏠</div>
+                    <h3>Wohnungsübergabereinigung</h3>
+                    <p>Gründliche Reinigung von Wohnungen für Übergaben oder Einzüge.</p>
                 </div>
                 <div class="service-item">
-                    <h3>Fensterreinigung</h3>
-                    <p>Streifenfreie Reinigung von Fenstern und Glasflächen für einen klaren Durchblick.</p>
+                    <div class="service-icon">💨</div>
+                    <h3>Hochdruckreinigung</h3>
+                    <p>Intensive Reinigung von Außenflächen wie Terrassen, Einfahrten und Fassaden.</p>
                 </div>
                 <div class="service-item">
-                    <h3>Teppichreinigung</h3>
-                    <p>Tiefenreinigung und Pflege von Teppichen und Polstermöbeln für ein frisches Raumgefühl.</p>
+                    <div class="service-icon">🏗️</div>
+                    <h3>Bauendreinigung</h3>
+                    <p>Professionelle Reinigung nach Bauarbeiten oder Renovierungen.</p>
                 </div>
             </div>
         </div>
 
         <div id="about" class="content">
-            <h2>Über uns</h2>
-            <p>Seit über 10 Jahren sind wir Ihr zuverlässiger Partner für alle Reinigungsaufgaben. Unser Team besteht aus geschulten Fachkräften, die mit modernster Technik und umweltfreundlichen Reinigungsmitteln arbeiten. Wir legen großen Wert auf Qualität, Zuverlässigkeit und Kundenzufriedenheit.</p>
+            <h2>Über den Service</h2>
+            <p>Seit über einem Jahrzehnt wird hier zuverlässige Partnerschaft für alle Reinigungsaufgaben geboten. Es wird mit modernster Technik und umweltfreundlichen Reinigungsmitteln gearbeitet. Qualität, Zuverlässigkeit und Kundenzufriedenheit stehen an oberster Stelle.</p>
         </div>
 
-        <div id="contact" class="contact">
-            <h2>Kontaktieren Sie uns</h2>
+ <div id="contact" class="contact">
+            <h2>Kontakt aufnehmen</h2>
             <p>Telefon: 0123 456789</p>
-            <p>E-Mail: info@ihrreinigungsservice.de</p>
+            <p>E-Mail: info@profireinigungsservice.de</p>
             <p>Adresse: Musterstraße 123, 12345 Musterstadt</p>
             <form>
                 <input type="text" placeholder="Name" required>
@@ -162,7 +188,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Ihr Reinigungsservice. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2023 Professioneller Reinigungsservice. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
