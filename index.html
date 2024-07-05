@@ -34,6 +34,18 @@
         position: fixed;
         width: 100%;
         z-index: 1000;
+        padding: 10px 0; /* Reduced padding */
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        max-height: 40px;
+        vertical-align: middle;
     }
 
     nav ul {
@@ -43,8 +55,8 @@
     }
 
     nav ul li {
-        display: inline;
-        margin: 0 15px;
+        display: inline-block;
+        margin: 0 10px;
     }
 
     nav ul li a {
@@ -61,7 +73,7 @@
     .hero {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/cleaning-image.jpg') no-repeat center center;
         background-size: cover;
-        height: 80vh;
+        height: 60vh; 
         display: flex;
         align-items: center;
         justify-content: center;
@@ -69,21 +81,25 @@
         color: white;
     }
 
+    .hero-content {
+        text-align: center;
+    }
+
     .hero-content h1 {
-        font-size: 3.5em;
-        margin-bottom: 20px;
+        font-size: 3em;
+        margin-bottom: 10px;
     }
 
     .hero-content p {
-        font-size: 1.2em;
-        margin-bottom: 30px;
+        font-size: 1.1em;
+        margin-bottom: 15px;
     }
 
     .cta-button {
         display: inline-block;
         background: #007bff;
         color: white;
-        padding: 12px 25px;
+        padding: 10px 20px;
         text-decoration: none;
         border-radius: 5px;
         font-weight: bold;
@@ -96,55 +112,61 @@
 
     .content {
         background: white;
-        padding: 50px;
-        margin-top: 30px;
+        padding: 40px;
+        margin-top: 20px;
         box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 
-    .logo {
-        max-height: 50px;
-        vertical-align: middle;
-    }
-
+    /* Services */
     .services {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
+        grid-gap: 20px;
     }
 
-    .services .service-item {
+    .service-item {
         text-align: left;
-        display: flex;
-        align-items: start;
-        padding: 20px;
         background: #f8f9fa;
         border-radius: 5px;
+        padding: 20px;
         transition: transform 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
     }
 
-    .services .service-item:hover {
+    .service-item:hover {
         transform: translateY(-5px);
     }
 
-    .services .service-icon {
+    .service-icon {
         font-size: 2em;
-        margin-right: 20px;
+        margin-right: 15px;
         color: #007bff;
     }
 
+    .service-item h3 {
+        margin-bottom: 10px;
+    }
+
+    /* Why Choose Us */
     .why-choose-us {
         background-color: #f8f9fa;
-        padding: 50px 0;
+        padding: 40px 0;
+    }
+
+    .why-choose-us h2 {
+        text-align: center;
     }
 
     .why-choose-us ul {
         list-style-type: none;
         padding: 0;
+        margin: 0 auto; /* Center list */
+        max-width: 800px; /* Limit width for better spacing */
     }
 
     .why-choose-us li {
-        margin-bottom: 15px;
-        padding-left: 30px;
+        margin-bottom: 10px;
+        padding-left: 25px;
         position: relative;
     }
 
@@ -157,50 +179,79 @@
         color: #007bff;
     }
 
+    /* Gallery */
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        grid-gap: 15px;
     }
 
     .gallery img {
         width: 100%;
         height: auto;
         border-radius: 5px;
+        object-fit: cover; /* Maintain aspect ratio */
     }
 
+    /* Testimonials */
     .testimonials {
         background-color: #ffffff;
-        padding: 50px 0;
+        padding: 40px 0;
+    }
+
+    .testimonials h2 {
+        text-align: center;
     }
 
     .testimonial {
         background-color: #f8f9fa;
-        padding: 20px;
+        padding: 15px;
         border-radius: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
     }
 
+    .testimonial p:first-child {
+        margin-bottom: 5px;
+    }
+
+    .testimonial p:last-child {
+        font-style: italic;
+        color: #777;
+    }
+
+    /* FAQ */
     .faq {
-        margin-top: 50px;
+        margin-top: 40px;
+    }
+
+    .faq h2 {
+        text-align: center;
     }
 
     .faq h3 {
-        margin-top: 20px;
+        margin-top: 15px;
         color: #007bff;
     }
 
+    /* Contact Form */
     .contact-form {
         background-color: #f8f9fa;
-        padding: 30px;
+        padding: 25px;
         border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+    }
+
+    .contact-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .contact-form input,
     .contact-form textarea {
         width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
+        padding: 8px;
+        margin-bottom: 10px;
         border: 1px solid #ddd;
         border-radius: 5px;
     }
@@ -209,19 +260,21 @@
         background-color: #007bff;
         color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 8px 15px;
         border-radius: 5px;
         cursor: pointer;
+        transition: background 0.3s ease;
     }
 
     .contact-form button:hover {
         background-color: #0056b3;
     }
 
+    /* Footer */
     footer {
         background-color: #333;
         color: #fff;
-        padding: 50px 0 20px;
+        padding: 40px 0 20px;
     }
 
     .footer-content {
@@ -232,12 +285,12 @@
 
     .footer-section {
         flex: 1;
-        margin-right: 30px;
-        margin-bottom: 30px;
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
 
     .footer-section h3 {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .footer-section ul {
@@ -246,7 +299,7 @@
     }
 
     .footer-section ul li {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .footer-section ul li a {
@@ -256,15 +309,15 @@
 
     .social-icons a {
         color: #fff;
-        font-size: 20px;
-        margin-right: 10px;
+        font-size: 18px;
+        margin-right: 8px;
     }
 
     .footer-bottom {
         border-top: 1px solid #555;
-        padding-top: 20px;
+        padding-top: 15px;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .footer-bottom a {
@@ -279,6 +332,10 @@
 
         .footer-section {
             margin-right: 0;
+        }
+
+        .why-choose-us ul {
+            max-width: 100%;
         }
     }
 </style>
@@ -363,7 +420,7 @@
         </div>
 
         <div id="contact" class="contact-form">
-     <h2>Kontaktieren Sie uns</h2>
+            <h2>Kontaktieren Sie uns</h2>
             <form>
                 <input type="text" name="name" placeholder="Ihr Name" required>
                 <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
