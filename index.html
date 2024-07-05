@@ -3,343 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professioneller Reinigungsservice - Zuverlässig & Effizient für Büro und Zuhause">
+    <meta name="keywords" content="Reinigung, Büroreinigung, Hausreinigung, Professionell, Zuverlässig">
     <title>Professioneller Reinigungsservice - Zuverlässig & Effizient</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<style>
-    body {
-        font-family: 'Open Sans', sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        color: #333;
-        background-color: #f8f9fa;
-    }
-
-    h1, h2, h3 {
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-        overflow: hidden;
-        padding: 20px;
-    }
-
-    header {
-        background: #ffffff;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-        padding: 10px 0; /* Reduced padding */
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        max-height: 40px;
-        vertical-align: middle;
-    }
-
-    nav ul {
-        padding: 0;
-        list-style: none;
-        text-align: right;
-    }
-
-    nav ul li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    nav ul li a {
-        color: #333;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-        color: #007bff;
-    }
-
-    .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/cleaning-image.jpg') no-repeat center center;
-        background-size: cover;
-        height: 60vh; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-    }
-
-    .hero-content {
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 3em;
-        margin-bottom: 10px;
-    }
-
-    .hero-content p {
-        font-size: 1.1em;
-        margin-bottom: 15px;
-    }
-
-    .cta-button {
-        display: inline-block;
-        background: #007bff;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-        background: #0056b3;
-    }
-
-    .content {
-        background: white;
-        padding: 40px;
-        margin-top: 20px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-
-    /* Services */
-    .services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 20px;
-    }
-
-    .service-item {
-        text-align: left;
-        background: #f8f9fa;
-        border-radius: 5px;
-        padding: 20px;
-        transition: transform 0.3s ease;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
-    }
-
-    .service-item:hover {
-        transform: translateY(-5px);
-    }
-
-    .service-icon {
-        font-size: 2em;
-        margin-right: 15px;
-        color: #007bff;
-    }
-
-    .service-item h3 {
-        margin-bottom: 10px;
-    }
-
-    /* Why Choose Us */
-    .why-choose-us {
-        background-color: #f8f9fa;
-        padding: 40px 0;
-    }
-
-    .why-choose-us h2 {
-        text-align: center;
-    }
-
-    .why-choose-us ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 auto; /* Center list */
-        max-width: 800px; /* Limit width for better spacing */
-    }
-
-    .why-choose-us li {
-        margin-bottom: 10px;
-        padding-left: 25px;
-        position: relative;
-    }
-
-    .why-choose-us li:before {
-        content: "\f00c";
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        position: absolute;
-        left: 0;
-        color: #007bff;
-    }
-
-    /* Gallery */
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 15px;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-        object-fit: cover; /* Maintain aspect ratio */
-    }
-
-    /* Testimonials */
-    .testimonials {
-        background-color: #ffffff;
-        padding: 40px 0;
-    }
-
-    .testimonials h2 {
-        text-align: center;
-    }
-
-    .testimonial {
-        background-color: #f8f9fa;
-        padding: 15px;
-        border-radius: 5px;
-        margin-bottom: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
-    }
-
-    .testimonial p:first-child {
-        margin-bottom: 5px;
-    }
-
-    .testimonial p:last-child {
-        font-style: italic;
-        color: #777;
-    }
-
-    /* FAQ */
-    .faq {
-        margin-top: 40px;
-    }
-
-    .faq h2 {
-        text-align: center;
-    }
-
-    .faq h3 {
-        margin-top: 15px;
-        color: #007bff;
-    }
-
-    /* Contact Form */
-    .contact-form {
-        background-color: #f8f9fa;
-        padding: 25px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
-    }
-
-    .contact-form h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
-
-    .contact-form button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-
-    .contact-form button:hover {
-        background-color: #0056b3;
-    }
-
-    /* Footer */
-    footer {
-        background-color: #333;
-        color: #fff;
-        padding: 40px 0 20px;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .footer-section {
-        flex: 1;
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-
-    .footer-section h3 {
-        margin-bottom: 15px;
-    }
-
-    .footer-section ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .footer-section ul li {
-        margin-bottom: 8px;
-    }
-
-    .footer-section ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .social-icons a {
-        color: #fff;
-        font-size: 18px;
-        margin-right: 8px;
-    }
-
-    .footer-bottom {
-        border-top: 1px solid #555;
-        padding-top: 15px;
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .footer-bottom a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-        .footer-content {
-            flex-direction: column;
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #ffdd57;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333;
         }
 
-        .footer-section {
-            margin-right: 0;
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-gray);
+            background-color: var(--light-gray);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px 0;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-height: 40px;
+            vertical-align: middle;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: right;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            background-image: url("hero-image1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden; /* This is important to contain the animation */
+            padding: 20px; /* Add padding for small screens */
+        }
+
+        .hero::before { /* Add a semi-transparent overlay */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("hero-image1.jpg");
+            background-size: cover;
+            background-position: center;
+            animation: zoom 20s ease-in-out infinite; 
+        }
+
+@keyframes zoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); } /* Adjust the scale value for zoom intensity */
+    100% { transform: scale(1); }
+}
+
+        .hero-content-wrapper { /* New wrapper for hero content */
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10; /* Ensure content is above the animation */
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow */
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--dark-gray);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            font-size: 18px;
+        }
+
+        .cta-button:hover {
+            background: #e0c14c;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            margin-top: 80px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            text-align: center;
+            background: #f0f3f5;
+            border-radius: 5px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-item h3 {
+            margin-bottom: 10px;
+        }
+
+        .why-choose-us {
+            background-color: var(--secondary-color);
+            padding: 50px 0;
+        }
+
+        .why-choose-us h2 {
+            text-align: center;
         }
 
         .why-choose-us ul {
-            max-width: 100%;
+            list-style: none; /* Correct property to remove list markers */
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-    }
-</style>
 
+        .why-choose-us li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .why-choose-us li:before {
+            content: "\f00c"; /* Keep the Font Awesome hook */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .testimonials {
+            background-color: #ffffff;
+            padding: 50px 0;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+        }
+
+        .testimonial {
+            background-color: #f0f3f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial p:first-child {
+            margin-bottom: 10px;
+        }
+
+        .testimonial p:last-child {
+            font-style: italic;
+            color: #777;
+        }
+
+        .faq {
+            margin-top: 50px;
+        }
+
+        .faq h2 {
+            text-align: center;
+        }
+
+        .faq h3 {
+            margin-top: 20px;
+            color: var(--primary-color);
+        }
+
+        .faq p {
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            background-color: #f0f3f5;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 18px;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: var(--dark-gray);
+            color: #fff;
+            padding: 50px 0 25px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-bottom a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-section {
+                margin-right: 0;
+            }
+
+            .why-choose-us ul {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -356,11 +431,14 @@
         </nav>
     </header>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Professionelle Reinigung für Ihr Zuhause und Büro</h1>
-            <p>Zuverlässig, effizient und umweltfreundlich</p>
-            <a href="#contact" class="cta-button">Jetzt Angebot anfordern</a>
+    <div class="hero" id="home">
+        <div class="hero-image"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-content">
+                <h1>Professionelle Reinigung für Ihr Zuhause und Büro</h1>
+                <p>Zuverlässig, effizient und umweltfreundlich</p>
+                <a href="#contact" class="cta-button">Jetzt Angebot anfordern</a>
+            </div>
         </div>
     </div>
 
@@ -370,28 +448,23 @@
             <div class="services">
                 <div class="service-item">
                     <i class="fas fa-building service-icon"></i>
-                    <div>
-                        <h3>Büroreinigung</h3>
-                        <p>Professionelle Reinigung von Büroräumen, Empfangsbereichen und Konferenzräumen für ein sauberes Arbeitsumfeld.</p>
-                    </div>
+                    <h3>Büroreinigung</h3>
+                    <p>Professionelle Reinigung von Büroräumen, Empfangsbereichen und Konferenzräumen für ein sauberes Arbeitsumfeld.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-home service-icon"></i>
-                    <div>
-                        <h3>Wohnungsübergabereinigung</h3>
-                        <p>Gründliche Reinigung von Wohnungen für Übergaben oder Einzüge, damit Sie einen perfekten Start haben.</p>
-                    </div>
+                    <h3>Wohnungsübergabereinigung</h3>
+                    <p>Gründliche Reinigung von Wohnungen für Übergaben oder Einzüge, damit Sie einen perfekten Start haben.</p>
                 </div>
-                <!-- More service items... -->
+                <!-- More service items can be added here -->
             </div>
         </div>
 
-        <div class="why-choose-us">
+        <div class="why-choose-us" id="about">
             <h2>Warum uns wählen?</h2>
             <ul>
-                <li>Über 10 Jahre Erfahrung</li>
                 <li>Umweltfreundliche Reinigungsmittel</li>
-                <li>Geschultes und zuverlässiges Personal</li>
+                <li>Zuverlässiges Personal</li>
                 <li>Flexible Terminvereinbarung</li>
                 <li>100% Zufriedenheitsgarantie</li>
             </ul>
@@ -400,7 +473,7 @@
         <div class="gallery">
             <img src="before-after-1.jpg" alt="Vor und nach der Reinigung">
             <img src="team-at-work-1.jpg" alt="Unser Team bei der Arbeit">
-            <!-- More gallery images... -->
+            <!-- More gallery images can be added here -->
         </div>
 
         <div class="testimonials">
@@ -409,19 +482,19 @@
                 <p>"Hervorragender Service! Mein Büro war noch nie so sauber."</p>
                 <p>- Maria S., Geschäftsführerin</p>
             </div>
-            <!-- More testimonials... -->
+            <!-- More testimonials can be added here -->
         </div>
 
         <div class="faq">
             <h2>Häufig gestellte Fragen</h2>
             <h3>Wie oft sollte ich mein Büro reinigen lassen?</h3>
             <p>Die Häufigkeit hängt von verschiedenen Faktoren ab, aber in der Regel empfehlen wir eine gründliche Reinigung mindestens einmal pro Woche.</p>
-            <!-- More FAQ items... -->
+            <!-- More FAQ items can be added here -->
         </div>
 
         <div id="contact" class="contact-form">
             <h2>Kontaktieren Sie uns</h2>
-            <form>
+            <form id="contactForm">
                 <input type="text" name="name" placeholder="Ihr Name" required>
                 <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
                 <input type="tel" name="phone" placeholder="Ihre Telefonnummer">
@@ -437,25 +510,25 @@
                 <div class="footer-section">
                     <h3>Kontakt</h3>
                     <p>Telefon: 0123 456789</p>
-                    <p>E-Mail: info@profireinigungsservice.de</p>
-                    <p>Adresse: Musterstraße 123, 12345 Musterstadt</p>
+                    <p>E-Mail: meine-mail@gmail.com</p>
+                    <p>Adresse: Mustergasse 123, 12345 Musterdorf</p>
                 </div>
                 <div class="footer-section">
                     <h3>Schnelllinks</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Dienstleistungen</a></li>
-                        <li><a href="#about">Über uns</a></li>
+                        <li><li><a href="#about">Über uns</a></li>
                         <li><a href="#contact">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Folgen Sie uns</h3>
                     <div class="social-icons">
-                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -477,10 +550,26 @@
             });
         });
 
+        // Simple form validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.querySelector('input[name="name"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var message = document.querySelector('textarea[name="message"]').value;
+
+            if (name && email && message) {
+                alert('Vielen Dank für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.');
+                // Here you would typically send the form data to a server
+                this.reset(); // Reset the form after successful submission
+            } else {
+                alert('Bitte füllen Sie alle erforderlichen Felder aus.');
+            }
+        });
+
         // You can add more JavaScript functionality here, such as:
-        // - Form validation
         // - Dynamic content loading
         // - Interactive elements (e.g., FAQ accordion)
+        // - More advanced form validation
     </script>
 </body>
 </html>
