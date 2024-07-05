@@ -6,14 +6,16 @@
     <title>Ihr Reinigungsservice - Professionell und Zuverlässig</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
         .container {
             width: 80%;
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
             padding: 20px;
@@ -21,23 +23,71 @@
         header {
             background: #35424a;
             color: white;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         header h1 {
             margin: 0;
             text-align: center;
         }
+        nav {
+            background: #e8491d;
+            color: white;
+            padding: 0.5rem 0;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
         .content {
             margin-top: 20px;
             background: white;
             padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .services {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .service-item {
+            flex-basis: 48%;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
         }
         .contact {
             background: #35424a;
             color: white;
             padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #e8491d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: white;
             margin-top: 20px;
         }
     </style>
@@ -49,25 +99,83 @@
         </div>
     </header>
 
-    <div class="container">
-        <div class="content">
-            <h2>Willkommen bei Ihrem Reinigungsservice</h2>
-            <p>Wir bieten professionelle und zuverlässige Reinigungsdienstleistungen für Privathaushalte und Unternehmen. Unser erfahrenes Team sorgt dafür, dass Ihre Räumlichkeiten stets sauber und einladend sind.</p>
-            <h3>Unsere Dienstleistungen:</h3>
+    <nav>
+        <div class="container">
             <ul>
-                <li>Büroreinigung</li>
-                <li>Haushaltsreinigung</li>
-                <li>Fensterreinigung</li>
-                <li>Teppichreinigung</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Dienstleistungen</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </div>
+    </nav>
 
-        <div class="contact">
+    <div class="container">
+        <div id="home" class="content">
+            <h2>Willkommen bei Ihrem Reinigungsservice</h2>
+            <p>Wir bieten professionelle und zuverlässige Reinigungsdienstleistungen für Privathaushalte und Unternehmen. Unser erfahrenes Team sorgt dafür
+
+            <p>Wir bieten professionelle und zuverlässige Reinigungsdienstleistungen für Privathaushalte und Unternehmen. Unser erfahrenes Team sorgt dafür, dass Ihre Räumlichkeiten stets sauber und einladend sind.</p>
+            <a href="#contact" class="cta-button">Jetzt Angebot anfordern</a>
+        </div>
+
+        <div id="services" class="content">
+            <h2>Unsere Dienstleistungen</h2>
+            <div class="services">
+                <div class="service-item">
+                    <h3>Büroreinigung</h3>
+                    <p>Professionelle Reinigung von Büroräumen, Empfangsbereichen und Konferenzräumen.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Haushaltsreinigung</h3>
+                    <p>Gründliche Reinigung von Privatwohnungen und Häusern nach Ihren individuellen Wünschen.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Fensterreinigung</h3>
+                    <p>Streifenfreie Reinigung von Fenstern und Glasflächen für einen klaren Durchblick.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Teppichreinigung</h3>
+                    <p>Tiefenreinigung und Pflege von Teppichen und Polstermöbeln für ein frisches Raumgefühl.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="content">
+            <h2>Über uns</h2>
+            <p>Seit über 10 Jahren sind wir Ihr zuverlässiger Partner für alle Reinigungsaufgaben. Unser Team besteht aus geschulten Fachkräften, die mit modernster Technik und umweltfreundlichen Reinigungsmitteln arbeiten. Wir legen großen Wert auf Qualität, Zuverlässigkeit und Kundenzufriedenheit.</p>
+        </div>
+
+        <div id="contact" class="contact">
             <h2>Kontaktieren Sie uns</h2>
             <p>Telefon: 0123 456789</p>
             <p>E-Mail: info@ihrreinigungsservice.de</p>
             <p>Adresse: Musterstraße 123, 12345 Musterstadt</p>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="E-Mail" required>
+                <textarea placeholder="Ihre Nachricht" required></textarea>
+                <button type="submit" class="cta-button">Nachricht senden</button>
+            </form>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Ihr Reinigungsservice. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
